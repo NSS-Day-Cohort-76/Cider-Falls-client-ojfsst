@@ -1,25 +1,23 @@
-table ParkAreas {
+table parkArea {
     id int [pk]
     name varchar
     location varchar
-    serviceId int
-    guestId int
 }
 
-table ParkService {
+table parkService {
     id int 
-    parkareasId int [ref: > ParkAreas.id]
-    parkserviceId int [ref: > ParkAreas.serviceId]
+    parkAreaId int [ref: > parkArea.id]
+    parkServiceId int [ref: > service.id]
 }
 
-table Services {
-    id int [pk, ref: > ParkService.id]
+table service {
+    id int [pk]
     name varchar
 }
 
-table Guests {
+table guest {
     id int [pk]
     firstName varchar
     lastName varchar
-    parkareaId int [ref: > ParkAreas.id]
+    parkAreaId int [ref: > parkArea.id]
 }
