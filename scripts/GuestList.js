@@ -1,40 +1,22 @@
-
-// dunno name of function to import yet
-import { getParkGuests } from "./database.js"
-
-const parkAreaElements = document.querySelectorAll(".park-area");
-
-//const guestList = getParkGuests();
+import { getParkAreas, getParkGuests } from "./database.js";
+import { addParkAreaEventListener } from "./EventListener.js";
 
 export const GuestList = () => {
-const areaElements = document.querySelectorAll(".park-area")
+  const parkAreas = getParkAreas();
+  const guests = getParkGuests();
+  const container = document.getElementById("container");
 
-    areaElements.forEach(areaElement => {
-        areaElement.addEventListener("click", () => {
-            const areaId = parseInt(areaElement.getAttribute("data-id"))
+  let parkAreaHTML = "";
+  for (const area of parkAreas) {
+    parkAreaHTML += `
+      <div class="park-area" data-id="${area.id}">
+        ${area.name}
+      </div>
+    `;
+  }
+  container.innerHTML = parkAreaHTML;
 
-            const guestList = getParkGuests()
-            const visitorCount = guestList.filter(guest => guest.parkAreaId === areaId).length
-            alert(`There are ${visitorCount} guests in this area`)
-        })
-    })
 
+
+addParkAreaEventListener(guests)
 }
-
-
-
-
-
-/* old code..
-
-parkAreaElements.forEach(areaElement => {
-    areaElement.addEventListener("click", () => {
-        const areaId = parseInt(areaElement.getAttribute("data-id"))
-        const visitorCount = guestList.filter(guest => guest.parkAreaId === areaId).length
-        alert(`There are ${visitorCount} in this area`)
-    })
-})
-
-
-
-*/

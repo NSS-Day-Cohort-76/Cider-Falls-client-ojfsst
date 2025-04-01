@@ -12,12 +12,7 @@ const applicationHTML = `
 <div class="">
   <section class="">
     <h2>Park Areas</h2>
-    <div class="park-area" data-id="1">Chamfort River</div> 
-    <div class="park-area" data-id="2">Lost Wolf Hiking Trail</div>
-    <div class="park-area" data-id="3">Lodge Area</div>
-    <div class="park-area" data-id="4">Gander River</div>
-    <div class="park-area" data-id="5">Campgrounds</div>
-    <div class="park-area" data-id="6">Pine Bluff Trails</div>
+    <div id="container"></div>
   </section>
 
   <section class="">

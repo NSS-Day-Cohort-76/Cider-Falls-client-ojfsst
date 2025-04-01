@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 /* Container for guest info display */
 #guest-info {
     margin-top: 1.5rem;
@@ -43,7 +42,6 @@
   
   .park-area:hover {
     background-color: #d2e4f0;
-=======
 * {
     margin: 0;
     padding: 0;
@@ -160,6 +158,5 @@
     width: 24px;
     margin: 0 0.5rem;
     cursor: pointer;
->>>>>>> develop
   }
   
