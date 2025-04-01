@@ -2,7 +2,7 @@ import { getParkServices } from "./database.js";
 
 const parkServices = getParkServices();
 
-export const serviceList = () => {
+export const ServiceList = () => {
   let servicesListHTML = `<section>`;
 
   parkServices.forEach((servicesObj) => {

@@ -1,21 +1,26 @@
 import { parkAreaHTML } from "./ParkArea.js";
-import { serviceList } from "./ParkService.js";
+import { ServiceList } from "./ParkService.js";
+import { GuestList } from "./GuestList.js"
 
 const mainContainer = document.querySelector("#container");
 
 const applicationHTML = `
 <header> 
-<h1>Cider Falls</h1>
-<img src="" alt="Cider Logo">
+  <h1>Cider Falls</h1>
+  <img src="" alt="Cider Logo">
 </header>
-<div class="park-area">
+<div class="park-areas-container">
     <section class="parkArea">
         <h2>Park Areas</h2>
-        ${parkAreaHTML()}
+        <div id="park-areas-container">
+        
+        </div>
+        
     </section>
     <section class="">
         <h2>Services</h2>
-        ${serviceList()}
+        <div id="services-strip"></div>
+
         </section>
     <section class=""> 
         <h2>Guests</h2>
@@ -28,3 +33,8 @@ const applicationHTML = `
 `;
 
 mainContainer.innerHTML = applicationHTML;
+
+
+GuestList()
+ServiceList()
+

@@ -25,16 +25,16 @@ const database = {
       { id: 1, firstName: "John", lastName: "Doe", parkAreaId: 1 },
       { id: 2, firstName: "Jane", lastName: "Smith", parkAreaId: 2 },
       { id: 3, firstName: "Bob", lastName: "Johnson", parkAreaId: 3 },
-      { id: 4, firstName: "Alice", lastName: "Williams", parkAreaId: 4 },
-      { id: 5, firstName: "Charlie", lastName: "Brown", parkAreaId: 5 },
+      { id: 4, firstName: "Alice", lastName: "Williams", parkAreaId: 3},
+      { id: 5, firstName: "Charlie", lastName: "Brown", parkAreaId: 3},
       { id: 6, firstName: "Emma", lastName: "Davis", parkAreaId: 6 },
       { id: 7, firstName: "Michael", lastName: "Clark", parkAreaId: 1 },
       { id: 8, firstName: "Sarah", lastName: "Lee", parkAreaId: 2 },
       { id: 9, firstName: "David", lastName: "White", parkAreaId: 3 },
-      { id: 10, firstName: "Laura", lastName: "Hall", parkAreaId: 4 },
+      { id: 10, firstName: "Laura", lastName: "Hall", parkAreaId: 3},
       { id: 11, firstName: "Tom", lastName: "Miller", parkAreaId: 5 },
       { id: 12, firstName: "Rachel", lastName: "Wilson", parkAreaId: 6 },
-      { id: 13, firstName: "James", lastName: "Taylor", parkAreaId: 1 },
+      { id: 13, firstName: "James", lastName: "Taylor", parkAreaId: 3 },
       { id: 14, firstName: "Olivia", lastName: "Anderson", parkAreaId: 2 },
       { id: 15, firstName: "Ethan", lastName: "Thomas", parkAreaId: 3 },
       { id: 16, firstName: "Sophia", lastName: "Harris", parkAreaId: 4 },
@@ -44,6 +44,9 @@ const database = {
       { id: 20, firstName: "Isabella", lastName: "Martinez", parkAreaId: 2 }
     ]
   };
+
+
+
 
 export const getParkAreas = () => structuredClone(database.parkAreas)
 export const getParkServices = () => structuredClone(database.services)
