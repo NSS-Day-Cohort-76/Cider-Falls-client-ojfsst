@@ -44,3 +44,7 @@ const database = {
       { id: 20, firstName: "Isabella", lastName: "Martinez", parkAreaId: 2 }
     ]
   };
+
+export const getParkAreas = () => structuredClone(database.parkAreas)
+export const getParkServices = () => structuredClone(database.services)
+export const getParkGuests = () => structuredClone(database.guests)
