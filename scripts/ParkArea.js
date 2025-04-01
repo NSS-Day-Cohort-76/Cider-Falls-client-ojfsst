@@ -1,16 +1,21 @@
-import { getParkAreas } from "./database.js"
+import { getParkAreas, getParkServices } from "./database.js"
 
 const parks = getParkAreas()
+const services = getParkServices()
 
 export const parkAreaHTML = () => {
-    let html = "<ul>"
+    let html = ""
 
     for (const park of parks) {
-        html += `<li
+        const serviceNames = park.serviceId.map(id => services.find(service => service.id === id)?.name).join(", ")
+
+        html += `<section
                 data-type="parks"
                 data-id=${park.id}>
-                ${park.name}</li>`
+                    <h2> In the ${park.location} section, there is the ${park.name}</h2>
+                    <p>It supports ${serviceNames}</p>
+                </section>
+                `
     }
-    html += "</ul>"
     return html
 }

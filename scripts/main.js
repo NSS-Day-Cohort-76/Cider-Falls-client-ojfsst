@@ -8,8 +8,8 @@ const applicationHTML = `
 <h1>Cider Falls</h1>
 <img src="" alt="Cider Logo">
 </header>
-<div class="">
-    <section class="">
+<div class="park-area">
+    <section class="parkArea">
         <h2>Park Areas</h2>
         ${parkAreaHTML()}
     </section>
