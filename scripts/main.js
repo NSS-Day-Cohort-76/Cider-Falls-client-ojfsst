@@ -1,4 +1,4 @@
-
+import { parkAreaHTML } from './ParkArea.js'
 
 
 const mainContainer = document.querySelector("#container")
@@ -11,7 +11,7 @@ const applicationHTML = `
 <div class="">
     <section class="">
         <h2>Park Areas</h2>
-        
+        ${parkAreaHTML()}
     </section>
     <section class="">
         <h2>Services</h2>
