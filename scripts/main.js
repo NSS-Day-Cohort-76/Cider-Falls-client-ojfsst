@@ -1,7 +1,9 @@
+import { getParkAreas, getParkServices } from "./database.js";
+import { servicesEventListener } from "./ParkService.js";
 import { parkAreaHTML } from "./ParkArea.js";
 import { ServiceList } from "./ParkService.js";
 import { getParkGuests } from "./database.js";
-import { addParkAreaEventListener } from "./EventListener.js"
+import { addParkAreaEventListener } from "./EventListener.js";
 
 const mainContainer = document.querySelector("#container");
 
@@ -17,7 +19,7 @@ const applicationHTML = `
         ${parkAreaHTML()}
         </div>
     </section>
-    <section class="">
+    <section class="services">
         <h2>Services</h2>
         <div id="services-strip"></div>
         ${ServiceList()}
@@ -31,4 +33,4 @@ const applicationHTML = `
 
 mainContainer.innerHTML = applicationHTML;
 
-addParkAreaEventListener(getParkGuests())
+addParkAreaEventListener(getParkGuests());
