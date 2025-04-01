@@ -14,3 +14,14 @@ export const addParkAreaEventListener = (guests) => {
     }
   });
 };
+<<<<<<< Updated upstream
+=======
+
+
+
+
+// export const addServiceAreaEventListener
+// need this event listener to tell us what services are available for what was clicked.
+
+
+>>>>>>> Stashed changes
