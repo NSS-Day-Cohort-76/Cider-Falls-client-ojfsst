@@ -1,7 +1,6 @@
+import { serviceList } from "./ParkService.js";
 
-
-
-const mainContainer = document.querySelector("#container")
+const mainContainer = document.querySelector("#container");
 
 const applicationHTML = `
 <header> 
@@ -15,7 +14,7 @@ const applicationHTML = `
     </section>
     <section class="">
         <h2>Services</h2>
-        
+        ${serviceList()}
         </section>
     <section class=""> 
         <h2>Guests</h2>
@@ -25,6 +24,6 @@ const applicationHTML = `
 <footer>
 <h2></h2>
 </footer>
-`
+`;
 
-mainContainer.innerHTML = applicationHTML
+mainContainer.innerHTML = applicationHTML;
