@@ -1,0 +1,119 @@
+@import "./styles.css";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "impact", sans-serif;
+  background-color: #d5dacc;
+  color: #1d1d1d;
+}
+
+header {
+  background-color: #3b372c;
+  color: #f4e5b5;
+  padding: 1.5rem;
+  text-align: center;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo {
+  position: absolute;
+  left: 2rem;
+  width: 60px;
+  height: auto;
+}
+
+.service-strip {
+  background-color: #d5dacc;
+  padding: 1rem 0;
+  text-align: center;
+}
+
+.service-strip ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.service-strip li {
+  font-weight: bold;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+main {
+  display: flex;
+  padding: 2rem;
+  gap: 2rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  flex-grow: 1;
+}
+
+.park-area {
+  background-color: #f3f0ec;
+  border-top: 3rem solid #3c4e34;
+  padding: 1rem;
+  min-height: 200px;
+}
+
+.park-area h2 {
+  margin-bottom: 1rem;
+  color: #1d1d1d;
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+
+.park-area ul {
+  list-style: disc inside;
+}
+
+.guests {
+  background-color: #3c4e34;
+  color: white;
+  padding: 1rem;
+  min-width: 200px;
+  height: fit-content;
+}
+
+.guests h2 {
+  text-align: center;
+  background-color: #f3f0ec;
+  color: #1d1d1d;
+  padding: 0.5rem;
+  font-size: 1.2rem;
+}
+
+.guests ul {
+  list-style: disc inside;
+  padding: 1rem;
+}
+
+footer {
+  background-color: #3b372c;
+  color: #f4e5b5;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  font-size: 0.9rem;
+}
+
+.social-icons img {
+  width: 24px;
+  margin: 0 0.5rem;
+  cursor: pointer;
+}

@@ -1,0 +1,23 @@
+table parkArea {
+    id int [pk]
+    name varchar
+    location varchar
+}
+
+table parkService {
+    id int 
+    parkAreaId int [ref: > parkArea.id]
+    parkServiceId int [ref: > service.id]
+}
+
+table service {
+    id int [pk]
+    name varchar
+}
+
+table guest {
+    id int [pk]
+    firstName varchar
+    lastName varchar
+    parkAreaId int [ref: > parkArea.id]
+}
