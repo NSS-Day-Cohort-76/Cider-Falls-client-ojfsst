@@ -8,10 +8,12 @@ export const serviceList = () => {
   parkServices.forEach((servicesObj) => {
     servicesListHTML += `
     <section data-type="services" class="services-strip">
-            <h2 class="service-strip" data-type="${servicesObj.id}">${servicesObj.name}</h2>
+            <h2 class="service-strip" 
+                data-type="${servicesObj.id}">
+                ${servicesObj.name}</h2>
     </section>
     `;
   });
-  servicesListHTML += "</section>";
+  servicesListHTML += `</section>`;
   return servicesListHTML;
 };
