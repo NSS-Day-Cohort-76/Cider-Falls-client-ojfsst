@@ -1,9 +1,9 @@
 import { getParkAreas, getParkServices } from "./database.js";
 
 const parkServices = getParkServices();
-
+const parkAreas = getParkAreas();
 export const ServiceList = () => {
-  let servicesListHTML = `<section>`;
+  let servicesListHTML = `<ul>`;
 
   parkServices.forEach((servicesObj) => {
     servicesListHTML += `
