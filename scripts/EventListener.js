@@ -16,4 +16,21 @@ container.addEventListener("click", ClkEvent => {
 };
 
 
+// export const addSectionEventListener = () => {
+//   const container = document.getElementById("container")
+
+//   container.addEventListener("click", clickEvent => {
+//     const itemClicked = clickEvent.target
+
+//       if(itemClicked.dataset.type === "services")
+
+//       for (service of services) {
+//         if(parseInt(itemClicked.dataset.id) === service.id){
+//           window.alert("Is this working?")
+//         }
+//       }
+//     }
+//   )
+// }
+
 

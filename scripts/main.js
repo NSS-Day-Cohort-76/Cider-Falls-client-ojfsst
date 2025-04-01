@@ -3,6 +3,7 @@ import { ServiceList } from "./ParkService.js";
 import { getParkGuests } from "./database.js";
 import { addParkAreaEventListener } from "./EventListener.js"
 
+
 const mainContainer = document.querySelector("#container");
 
 const applicationHTML = `

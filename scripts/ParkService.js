@@ -9,7 +9,7 @@ export const ServiceList = () => {
     servicesListHTML += `
     <section data-type="services" class="services-strip">
             <h2 class="service-strip" 
-                data-type="${servicesObj.id}">
+                data-id="${servicesObj.id}">
                 ${servicesObj.name}</h2>
     </section>
     `;
