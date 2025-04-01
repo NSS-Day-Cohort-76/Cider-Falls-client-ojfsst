@@ -45,15 +45,9 @@ const database = {
     ]
   };
 
-<<<<<<< HEAD
 
 
-  export const getGuests = () => structuredClone(database.guests);
-  export const getParkAreas = () => structuredClone(database.parkAreas)
-  export const getServices = () => structuredClone(database.services)
 
-=======
 export const getParkAreas = () => structuredClone(database.parkAreas)
 export const getParkServices = () => structuredClone(database.services)
 export const getParkGuests = () => structuredClone(database.guests)
->>>>>>> develop

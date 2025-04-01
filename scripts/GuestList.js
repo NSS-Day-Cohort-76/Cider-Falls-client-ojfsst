@@ -1,10 +1,10 @@
 
 // dunno name of function to import yet
-import { getGuests } from "./database.js"
+import { getParkGuests } from "./database.js"
 
 const parkAreaElements = document.querySelectorAll(".park-area");
 
-const guestList = getGuests();
+//const guestList = getParkGuests();
 
 export const GuestList = () => {
 const areaElements = document.querySelectorAll(".park-area")
@@ -13,7 +13,7 @@ const areaElements = document.querySelectorAll(".park-area")
         areaElement.addEventListener("click", () => {
             const areaId = parseInt(areaElement.getAttribute("data-id"))
 
-            const guestList = getGuests()
+            const guestList = getParkGuests()
             const visitorCount = guestList.filter(guest => guest.parkAreaId === areaId).length
             alert(`There are ${visitorCount} guests in this area`)
         })
