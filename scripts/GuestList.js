@@ -4,7 +4,7 @@ import { addParkAreaEventListener } from "./EventListener.js";
 export const GuestList = () => {
   const parkAreas = getParkAreas();
   const guests = getParkGuests();
-  const container = document.getElementById("container");
+  const container = document.getElementById("park-areas-container");
 
   let parkAreaHTML = "";
   for (const area of parkAreas) {

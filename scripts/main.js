@@ -1,5 +1,6 @@
 
 import { GuestList } from "./GuestList.js";
+import { ServiceList } from "./ServiceList.js";
 
 const mainContainer = document.querySelector("#container")
 
@@ -12,11 +13,12 @@ const applicationHTML = `
 <div class="">
   <section class="">
     <h2>Park Areas</h2>
-    <div id="container"></div>
+    <div id="park-areas-container"></div>
   </section>
 
   <section class="">
     <h2>Services</h2>
+    <div id="services-container"></div>
   </section>
 
   <section class=""> 
@@ -32,3 +34,4 @@ mainContainer.innerHTML = applicationHTML
 
 
 GuestList()
+ServiceList();
