@@ -15,22 +15,18 @@ export const addParkAreaEventListener = (guests) => {
   });
 };
 
+export const servicesEventListener = (parks, services) => {
+  const container = document.getElementById("container")
+  container.addEventListener("click", (clickedItem) => {
 
-// export const addSectionEventListener = () => {
-//   const container = document.getElementById("container")
-
-//   container.addEventListener("click", clickEvent => {
-//     const itemClicked = clickEvent.target
-
-//       if(itemClicked.dataset.type === "services")
-
-//       for (service of services) {
-//         if(parseInt(itemClicked.dataset.id) === service.id){
-//           window.alert("Is this working?")
-//         }
-//       }
-//     }
-//   )
-// }
-
-
+    const itemClicked = clickedItem.target
+    if (itemClicked.dataset.type === "services"){
+        for (const park of parks){
+          if (park.id === parseInt(itemClicked.dataset.id)){
+            window.alert(`${itemClicked.dataset.name} is offered at ${park.name}`)
+          } 
+        }
+      }
+    }
+  )
+}

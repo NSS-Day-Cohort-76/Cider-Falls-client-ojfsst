@@ -7,11 +7,13 @@ export const ServiceList = () => {
 
   parkServices.forEach((servicesObj) => {
     servicesListHTML += `
-    <li         data-type="services" 
-                class="services-strip">
-            <h2 class="service-strip" 
-                data-id="${servicesObj.id}">
-                ${servicesObj.name}</h2>
+              <li 
+              data-type="services"
+              data-name="${servicesObj.name}" 
+              data-id="${servicesObj.id}"
+              class="services-strip">
+              <h2 class="service-strip">
+              ${servicesObj.name}</h2>
     </li>
     `;
   });
@@ -19,22 +21,7 @@ export const ServiceList = () => {
   return servicesListHTML;
 };
 
-export const servicesEventListener = () => {
-  document.addEventListener("click", function (clickedItem) {
-    const itemClicked = clickedItem.target;
 
-    if (itemClicked.dataset.type === "services") {
-      const servicesId = parseInt(itemClicked.dataset.id);
-
-      const areas = parkAreas.find((item) => item.serviceId === servicesId);
-      for (const area of parkAreas) {
-        if (area.serviceId === servicesId) {
-          window.alert(`This service is offered on these trails ${areas.name}`);
-        }
-      }
-    }
-  });
-};
 // export const servicesEventListener = () => {
 //   document.addEventListener("click", function (clickedItem) {
 //     const itemClicked = clickedItem.target;
