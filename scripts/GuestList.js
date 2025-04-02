@@ -1,20 +1,19 @@
-// import { getParkAreas, getParkGuests } from "./database.js";
-// import { addParkAreaEventListener } from "./EventListener.js";
+import { getParkGuests } from "./database.js";
 
-// export const GuestList = () => {
-//   const parkAreas = getParkAreas();
-//   const guests = getParkGuests();
-//   const container = document.getElementById("park-areas-container");
+const guests = getParkGuests();
 
-//   let parkAreaHTML = "";
-//   for (const area of parkAreas) {
-//     parkAreaHTML += `
-//       <div class="park-area" data-id="${area.id}">
-//         ${area.name}
-//       </div>
-//     `;
-//   }
-//   container.innerHTML = parkAreaHTML;
+export const guestList = () => {
+  let guestHTML = `<ul>`;
 
-//   addParkAreaEventListener(guests);
-// };
+  guests.forEach((guest) => {
+    guestHTML += ` 
+<li        data-type="guest"
+            class="guest"
+            data-id="${guest.id}">
+            ${guest.firstName}
+</li>
+               `;
+  });
+  guestHTML += `</ul>`;
+  return guestHTML;
+};
