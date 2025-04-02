@@ -1,0 +1,180 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* body {
+    font-family: 'Arial', sans-serif;
+    background-color: #d5dacc;
+    color: #1d1d1d; */
+
+.logo {
+  position: absolute;
+  left: 2rem;
+  width: 60px;
+  height: auto;
+}
+
+/* Service strip above the park area cards */
+.service-strip {
+  background-color: #d5dacc;
+  padding: 1.5rem 0;
+  text-align: center;
+}
+
+.service-strip span {
+  display: inline-block;
+  margin: 0 1rem;
+  font-weight: bold;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.main-content {
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem;
+  gap: 2rem;
+}
+
+.area-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  flex-grow: 1;
+}
+
+.guests {
+  background-color: #3c4e34;
+  color: white;
+  padding: 1rem;
+  min-width: 200px;
+  height: fit-content;
+  border-radius: 0.5rem;
+}
+
+.guests h2 {
+  text-align: center;
+  background-color: #f3f0ec;
+  color: #1d1d1d;
+  padding: 0.5rem;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.guests ul {
+  list-style: disc inside;
+  padding: 0 1rem;
+}
+
+footer {
+  background-color: #3b372c;
+  color: #f4e5b5;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  font-size: 0.9rem;
+}
+
+.social-icons img {
+  width: 24px;
+  margin: 0 0.5rem;
+  cursor: pointer;
+}
+
+park-area {
+  background-color: #f6f3ef;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.park-header {
+  background-color: #2f4322;
+  color: white;
+  text-align: center;
+  font-family: "Impact";
+  text-transform: uppercase;
+  padding: 0.5rem;
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+  font-size: 1rem;
+}
+
+.park-area ul {
+  list-style-type: disc;
+  columns: 2;
+  padding-left: 1.2rem;
+  margin-top: 0.75rem;
+}
+
+.park-area ul li {
+  font-size: 0.9rem;
+  padding: 0.3rem 0;
+  color: #2b2b2b;
+}
+park-area {
+  background-color: #f6f3ef;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.park-area ul {
+  list-style-type: disc;
+  columns: 2;
+  padding-left: 1.2rem;
+  margin-top: 0.75rem;
+}
+
+.park-area ul li {
+  font-size: 0.9rem;
+  padding: 0.3rem 0;
+  color: #2b2b2b;
+}
+
+.area-name {
+  font-family: "Impact";
+  text-transform: uppercase;
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  cursor: pointer;
+}
+
+/* Guest Card Styling */
+.guests {
+  background-color: #2f4322;
+  color: white;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  max-height: fit-content;
+}
+
+.guests ul li {
+  padding: 0.3rem 0;
+  font-size: 0.9rem;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 900px) {
+  .main-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .area-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .guests {
+    width: 100%;
+  }
+
+  .service-strip ul {
+    flex-direction: column;
+    align-items: center;
+  }
+}
